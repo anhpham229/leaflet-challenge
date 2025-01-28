@@ -15,7 +15,7 @@ The Earthquake Visualization is built using JavaScript, D3.js, and Leaflet for i
 - Popups: When the user clicks on a marker, a popup will display additional details about the earthquake, such as: place, magnitude, depth of the earthquake.
 - Legend: Displays a color-coded guide for the earthquake depth ranges and corresponding colors. The user can reference the legend to better understand the color coding and interpret the map's data.
 
-## Folder/file Breakdown (Leaflet-Part-1)
+## Folder/file Breakdown
 - index.html: The main HTML file that structures the map and links to other assets (CSS/JS files).
 - static/js/app.js: The JavaScript file containing the code for:
     +   Fetching earthquake data from USGS.
@@ -28,4 +28,5 @@ The Earthquake Visualization is built using JavaScript, D3.js, and Leaflet for i
 1.  Clone or download the repository to your local machine.
 2.  Open index.html file in any web browser (Chrome, Firefox, etc.) to see the Earthquake Visualization in action.
 
-## To Deploy on a Web Server:
+## How to Run on Web Server:
+Click to the deployment link for seeing the result: https://anhpham229.github.io/leaflet-challenge/
