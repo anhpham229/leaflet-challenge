@@ -35,11 +35,11 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
   // Initialize an array to hold earthquake circles.
   let earthquakeCircles = [];
 
-  // Loop through the stations array.
+  // Loop through the features array.
   for (let index = 0; index < data.features.length; index++) {
     let feature = data.features[index];
 
-    // For each station, create a marker, and bind a popup with the station's name.
+    // For each feature, create a marker, and bind a popup with the feature's place.
     let latlng = [feature.geometry.coordinates[1], feature.geometry.coordinates[0]]
     let earthquakeCircle = L.circleMarker(latlng, styleInfo(feature));
 
@@ -55,7 +55,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     earthquakeCircles.push(earthquakeCircle);
   }
 
-  // Create a layer group that's made from the bike markers array, and pass it to the createMap function.
+  // Create a layer group that's made from the earthquake markers array, and pass it to the createMap function.
   let earthquakeLayer = L.layerGroup(earthquakeCircles);
   
   // Add the layer group to the map
@@ -98,9 +98,9 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
   // Loop through our depth intervals to generate a label with a colored square for each interval.
   for (let i = 0; i < depthRanges.length; i++) {
     labels.push(
-      '<div style="display: flex; align-items: center;">' + // Flexbox for inline items
+      '<div style="display: flex; align-items: center;">' + 
       '<i style="background:' + colors[i] + '; width: 20px; height: 20px; margin-right: 8px;"></i>' + // Color box with margin
-      depthRanges[i] + // Depth range text
+      depthRanges[i] + 
       '</div>'
     );
   }
